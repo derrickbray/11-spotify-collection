@@ -7,14 +7,14 @@ export default class SpotifyTrack {
     this.el.innerHTML = `
       <p class="track__artist"></p>
       <p class="track__name"></p>
-      <p class="track__image"></p>
-      <p class="track__url"></p>`;
+      <a class="track__url"></a>
+      <img class="track__image"/>`;
   }
 
   render() {
     this.el.querySelector('.track__artist').innerText = this.data.artist;
     this.el.querySelector('.track__name').innerText = this.data.name;
-    this.el.querySelector('.track__image').innerText = this.data.image;
+    this.el.querySelector('.track__image').src = this.data.image;
     this.el.querySelector('.track__url').innerText = this.data.url;
   }
 }

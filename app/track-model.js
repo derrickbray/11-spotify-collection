@@ -1,8 +1,10 @@
 export default class Track {
-  constructor(data) {
-    this.artist = data.artists[0].name;
-    this.name = data.items[0].name;
-    this.image = data.images[0].url;
-    this.url = data.items[0].external_urls;
+  constructor(track) {
+    this.artist = track.artists[0].name;
+    this.name = track.name;
+    this.image = track.album.images[0].url;
+    this.url = track.external_urls;
+
+    console.log(this);
   }
 }

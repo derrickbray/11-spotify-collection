@@ -1,14 +1,18 @@
 import 'whatwg-fetch';
-import './data.json';
-import './track-model';
-import './track-view';
 
-const el = document.createElement('div');
-SpotifyTrack.forEach((item) => {
-  const t = new Track(item);
+import data from './data.json';
+import Model from './track-model';
+import TrackView from './track-view';
+
+const results = document.querySelector('.results');
+
+console.log(data);
+
+data.tracks.items.forEach((item) => {
+  const t = new Model(item);
 
   const view = new TrackView(t);
   view.render();
-  document.body.appendChild(view.el);
 
-}
+  results.appendChild(view.el);
+});
