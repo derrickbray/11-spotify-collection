@@ -1,8 +1,6 @@
-
 export default class SpotifyTrack {
   constructor(data) {
     this.data = data;
-
 
     this.el = document.createElement('div');
     this.el.classList.add('track');
