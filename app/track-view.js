@@ -5,12 +5,7 @@ export default class SpotifyTrack {
     this.el = document.createElement('div');
     this.el.classList.add('panel-block');
     this.el.classList.add('media');
-    this.el = document.createElement('div');
     this.el.classList.add('track');
-    // this.el.classList.add('track__frame');
-    this.el.classList.add('track-content');
-    this.el.classList.add('track-right');
-
     this.el.innerHTML = `
       <div class="track__frame">
         <img class="track__image"/>
