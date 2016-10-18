@@ -3,15 +3,21 @@ export default class SpotifyTrack {
     this.data = data;
 
     this.el = document.createElement('div');
-    this.el.classList.add('track');
     this.el.classList.add('panel-block');
+    this.el.classList.add('media');
+    this.el = document.createElement('div');
+    this.el.classList.add('track');
+    // this.el.classList.add('track__frame');
+    this.el.classList.add('track-content');
+    this.el.classList.add('track-right');
+
     this.el.innerHTML = `
       <div class="track__frame">
         <img class="track__image"/>
       </div>
       <p class="track__artist"></p>
       <p class="track__name"></p>
-      <a class="track__url"></a>
+      <a class="track__url"><span class="fa fa-spotify fa-3x"></span></a>
       `;
   }
 
