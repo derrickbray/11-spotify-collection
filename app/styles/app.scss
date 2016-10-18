@@ -20,6 +20,7 @@ $white: hsl(0, 0%, 21%);
 .panel {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 
   &-block {
     color: #fff;
