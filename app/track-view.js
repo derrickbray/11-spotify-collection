@@ -27,12 +27,12 @@ export default class SpotifyTrack {
 
     this.render();
   }
-  // console.log(results);
+    // console.log(results);
 
   render() {
     this.el.querySelector('.track__artist').innerText = this.data.artist;
     this.el.querySelector('.track__name').innerText = this.data.name;
     this.el.querySelector('.track__image').src = this.data.image;
-    this.el.querySelector('.track__url').href = this.data.url;
+    this.el.querySelector('.track__link').href = this.data.url;
   }
 }
